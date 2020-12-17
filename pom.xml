@@ -20,6 +20,13 @@
             <artifactId>flink-streaming-scala_2.11</artifactId>
             <version>1.10.0</version>
         </dependency>
+        <!--kafka连接器的依赖-->
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-connector-kafka-0.11_2.11</artifactId>
+            <version>1.10.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -50,8 +57,10 @@
                 <executions>
                     <execution>
                         <id>make-assembly</id>
+                        <!-- 绑定到package生命周期 -->
                         <phase>package</phase>
                         <goals>
+                            <!-- 只运行一次 -->
                             <goal>single</goal>
                         </goals>
                     </execution>
