@@ -20,12 +20,26 @@
             <artifactId>flink-streaming-scala_2.11</artifactId>
             <version>1.10.0</version>
         </dependency>
-        <!--kafka连接器的依赖-->
+        <!--kafka连接器的依赖(包括sink,source)-->
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-connector-kafka-0.11_2.11</artifactId>
             <version>1.10.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.bahir/flink-connector-redis -->
+        <!-- redisSink第三方支持插件-->
+        <dependency>
+            <groupId>org.apache.bahir</groupId>
+            <artifactId>flink-connector-redis_2.11</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <!-- ESSink第三方支持插件-->
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-connector-elasticsearch6_2.11</artifactId>
+            <version>1.10.0</version>
+        </dependency>
+
 
     </dependencies>
 

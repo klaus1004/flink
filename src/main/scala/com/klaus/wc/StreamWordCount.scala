@@ -14,7 +14,7 @@ object StreamWordCount {
     //接收socket文本流
     val inputDataStream = environment.socketTextStream(host, port)
     //定义转换操作
-    val result = inputDataStream.flatMap(_.split(" ")).filter(_.nonEmpty).map((_, 1)).keyBy(0).sum(1)
+    val result = inputDataStream.flatMap(_.split(" ")).filter(_.nonEmpty).map((_ , 1)).keyBy(0).sum(1)
 
     result.print()
     environment.execute("TextStreamWordCount")
