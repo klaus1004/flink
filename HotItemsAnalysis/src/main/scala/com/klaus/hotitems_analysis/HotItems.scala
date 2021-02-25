@@ -1,6 +1,7 @@
 package com.klaus.hotitems_analysis
 
 import java.sql.Timestamp
+import java.util
 
 import org.apache.flink.api.common.functions.AggregateFunction
 import org.apache.flink.api.common.state.{ListState, ListStateDescriptor}
@@ -71,6 +72,7 @@ class ItemCountWindowResult() extends WindowFunction[Long,ItemViewCount,Tuple,Ti
     val windowEnd = window.getEnd
     val count = input.iterator.next()
     out.collect(ItemViewCount(itemId,windowEnd,count))
+    util.BitSet
   }
 }
 //自定义KeyedProcessFunction
